@@ -4,7 +4,7 @@
 
 :root {
 
-    --header-height: 20rem;
+    --header-height: 15rem;
     
     --hue-color: 203;
 
@@ -157,7 +157,8 @@ img{
 
 .nav{
 
-     max-width: 968px;  
+     max-width: 1000px;  
+
      height: var(--header-height);
     display: flex;
     justify-content: space-between;
@@ -229,7 +230,7 @@ img{
 
 
 .home__container{
-    gap: 1rem;
+    gap: 0.5rem;
 }
 
 .home__content{
@@ -253,7 +254,6 @@ img{
 
 .home__data{
     grid-column: 1/3;
-    text-align: right;
 }
 
 
