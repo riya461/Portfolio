@@ -263,13 +263,13 @@ img{
 }
 
 .nav__icon {
-    font-size: 1.2rem;
+    font-size: 1.0rem;
 } 
 
 
 
 .home__container{
-    gap: 0.5rem;
+    gap: 0.15rem;
 }
 
 .home__content{
@@ -311,7 +311,9 @@ img{
 }
 
 .home__description{
-    text-align: center;
+    
+    font-size: var(--h3-font-size);
+    
     margin-bottom: var(--mb-2);
 }
 
@@ -324,26 +326,43 @@ img{
 .home__scroll{
     text-align: center;
 }
-.about__intro{
-    font-size: large;
-    text-align: center;
-    margin-left: 2.5rem;
-    margin-right: 2.5rem;
-    margin-bottom: 2.5rem;
-    margin-top: 4rem;
-    word-spacing: 15px;
+ .box-container{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-left: 7.5rem;
+    margin-top: 0rem;
+}
+ .box-container .box1{
+    
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+ .box-container .box2{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+ .box-container .box{
+    width:65%;
+    margin:0.5rem 1rem;
+    position: relative;
+    height: 10rem; 
 }
 
-.about__description{
-    font-size: large;
-    text-align: center;
-    margin-left: 2.5rem;
-    margin-right: 2.5rem;
-    margin-bottom: 2.5rem;
-    margin-top: 4rem;
+ .box-container .box h4{
+    font-size: 1.2rem;
+    color:rgb(20, 20, 20);
+    padding: 0.1rem;
 }
 
-
+ .box-container .box p{
+    font-size: 1.5rem;
+    color:rgb(44, 40, 40);
+    padding: 0.1rem;
+}
 
 
 .qualification__button{
@@ -458,6 +477,7 @@ img{
     margin-bottom: var(--mb-0-5);
 }
 .project__description{
+    font-size: small;
     margin-bottom: var(--mb-0-75);
 }
 
