@@ -1,0 +1,78 @@
+
+.wrapper{
+    font-size: large;
+}
+
+.content {
+    flex-grow: 1;
+    display: grid;
+    gap: 2.3em;
+    grid-template-columns: repeat(3,auto);
+    grid-template-areas: "one two four"
+    " one three five"
+   ;
+}
+.card{
+    border-radius: 0.8em;
+    padding: 1.1em;
+    display: flex;
+    align-items: flex-end;
+    transition: background-size 800ms;
+}
+.card1{
+    grid-area: one;
+    background-size: 90%;
+    background-image: url('../images/card1.png');
+
+}
+.card2{
+    background-size: 100%;
+    background-image: url('../images/card2.jpg');
+}
+.card3{
+    background-size: 100%;
+    background-image: url(../images/card3.jpeg);
+}
+.card4{
+    background-size: 100%;
+    background-image: url(../images/project1.webp);
+}
+.card5{
+    background-size: 100%;
+    background-image: url(../images/card5.jpeg);
+}
+
+.card-details {
+    background: black;
+    border-radius: .6em;
+    padding: 2em;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    transition: transform 800ms;
+}
+
+.card-details a{
+    color: white;
+    text-decoration: none;
+    font-size: 1.6rem;
+    font-weight: bolder;
+
+}
+
+.card-details p{
+    font-size: 1.2rem;
+    margin:  0;
+}
+p.topic {
+    font-size: 1.5rem;
+    font-style: italic;
+}
+
+.card:hover{
+    background-size: 120%;
+}
+
+.card:hover .card-details{
+    transform: translateY(-20px);
+}

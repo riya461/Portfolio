@@ -1,7 +1,7 @@
 const typedTextSpan = document.querySelector(".typed-text");
 const cursorSpan = document.querySelector(".cursor");
 
-const textArray = ["Riya ...", "a college student ...", "a coder ..."];
+const textArray = ["Riya Sabu ...", "a college student ...", "a coder ..."];
 const typingDelay = 200;
 const erasingDelay = 100;
 const newTextDelay = 2000; // Delay between current and next text
@@ -32,10 +32,11 @@ function erase() {
     cursorSpan.classList.remove("typing");
     textArrayIndex++;
     if(textArrayIndex>=textArray.length) textArrayIndex=0;
-    setTimeout(type, typingDelay + 1100);
+    setTimeout(type, typingDelay + 200);
   }
 }
 
 document.addEventListener("DOMContentLoaded", function() { // On DOM Load initiate the effect
-  if(textArray.length) setTimeout(type, newTextDelay + 250);
+  if(textArray.length) setTimeout(type, newTextDelay + 150);
 });
+
