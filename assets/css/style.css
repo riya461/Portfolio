@@ -70,7 +70,7 @@ nav ul li a:before {
 .main_div{
     margin-top: 5rem;
     display: grid;
-    grid-template-columns: repeat(2,auto);
+    grid-template-columns: repeat(2,auto);;
     /* gap: 3em; */
 }
 .nam{
