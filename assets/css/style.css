@@ -9,7 +9,9 @@ body{
     font-family:'Courier New', Courier, monospace;
     font-size: x-large;
 }
-
+.right-col{
+    align-items: center;
+}
 .wrapper{
     max-width: 1200px;
     margin: 0 auto;
@@ -25,14 +27,10 @@ header{
 }
 
 
-nav {
-    margin: 4em;
-
-}
 
 nav ul {
     list-style-type: none;
-    display: flex;
+    display: flexbox;
     gap: 4.1em;
     margin: 0;
 }
@@ -71,8 +69,12 @@ nav ul li a:before {
 /* active line  */
 .main_div{
     margin-top: 5rem;
-    display: flex;
-    gap: 4em;
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+    /* gap: 3em; */
+}
+.nam{
+    font-size: smaller;
 }
 h1{
 
@@ -147,10 +149,43 @@ form input, form textarea{
     border-radius: 6px;
 }
 .row{
-    display: flex;
-}
+    display: flex;}
 
 .submit {
     align-self: flex-end;
     width: 30%;
 }
+@media screen and (max-width: 500px) {
+    
+nav ul li a {
+      float: none;
+      display: block;
+      width: 100%;
+      text-align: left; /* If you want the text to be left-aligned on small screens */
+}
+      
+    nav ul li a.active:before{
+        position: absolute;
+        content: "";
+        width: 35%;
+        height: 1px;
+        border-bottom: 2px solid white;
+        bottom: -6px;
+    }
+    
+    nav ul li a:hover:before {
+        width: 35%;
+    }
+    
+    /* onli when we hover in nav*/
+    nav ul li a:before {
+        position: absolute;
+        content: "";
+        width: 0%;
+        height: 1px;
+        border-bottom: 2px solid white;
+        bottom: -6px;
+        transition: width .3s;
+    }
+    }
+  
