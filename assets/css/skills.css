@@ -1,3 +1,8 @@
+
+
 .box-container{
-    display: grid;
+    display: flex;
+}
+.achieve{
+    display: flex;
 }

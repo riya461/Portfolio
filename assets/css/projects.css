@@ -7,9 +7,9 @@
     flex-grow: 1;
     display: grid;
     gap: 2.3em;
-    grid-template-columns: repeat(3,auto);
-    grid-template-areas: "one two four"
-    " one three five"
+    grid-template-columns: repeat(2,auto);
+    grid-template-areas: "one two "
+    " four three"
    ;
 }
 .card{
@@ -37,13 +37,10 @@
     background-size: 100%;
     background-image: url(../images/project1.webp);
 }
-.card5{
-    background-size: 100%;
-    background-image: url(../images/card5.jpeg);
-}
+
 
 .card-details {
-    background: black;
+    background: grey;
     border-radius: .6em;
     padding: 2em;
     width: 100%;

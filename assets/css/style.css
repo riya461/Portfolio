@@ -1,7 +1,7 @@
 * {
-    background-color: black;
+    background-color: grey;
     color: white;
-    /* font-size: 98.5%; */
+    margin: 1.5rem;
 }
 
 body{
@@ -27,11 +27,12 @@ header{
 }
 
 
-
 nav ul {
-    list-style-type: none;
-    display: flexbox;
-    gap: 4.1em;
+
+
+    list-style-type:none;
+    display: flex;
+    gap: 2.1em;
     margin: 0;
 }
 
@@ -39,22 +40,12 @@ nav ul li a {
     text-decoration: none;
     color: white;
     text-transform: uppercase;
-    font-size: 1.1rem;
-    position: relative;
+    font-size: 1.3rem;
+    font-weight: 600;
 
 }
-nav ul li a.active:before{
-    position: absolute;
-    content: "";
-    width: 35%;
-    height: 1px;
-    border-bottom: 2px solid white;
-    bottom: -6px;
-}
 
-nav ul li a:hover:before {
-    width: 35%;
-}
+
 
 /* onli when we hover in nav*/
 nav ul li a:before {
@@ -73,13 +64,12 @@ nav ul li a:before {
     grid-template-columns: repeat(2,auto);;
     /* gap: 3em; */
 }
-.nam{
-    font-size: smaller;
-}
+
 h1{
 
     font-family: 'Zeyada';
-    font-weight: normal;
+    font-weight: bold;
+    font-size:xx-large;
     margin: 0;
 }
 
@@ -164,14 +154,7 @@ nav ul li a {
       text-align: left; /* If you want the text to be left-aligned on small screens */
 }
       
-    nav ul li a.active:before{
-        position: absolute;
-        content: "";
-        width: 35%;
-        height: 1px;
-        border-bottom: 2px solid white;
-        bottom: -6px;
-    }
+   
     
     nav ul li a:hover:before {
         width: 35%;
