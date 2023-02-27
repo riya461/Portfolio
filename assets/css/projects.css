@@ -4,6 +4,7 @@
 }
 
 .content {
+    /* overflow: scroll; */
     flex-grow: 1;
     display: grid;
     gap: 2.3em;
