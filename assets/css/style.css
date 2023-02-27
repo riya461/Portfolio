@@ -110,6 +110,18 @@ form input, form textarea{
     font-size: 18px;
     border-radius: 6px;
 }
+
+@media only screen and (min-width: 600px) {
+    .left-col{
+        display: flex;
+    }
+    nav{
+        display: flex;
+    }
+    
+  }
+
+
 .row{
     display: flex;}
 
@@ -118,17 +130,12 @@ form input, form textarea{
     width: 30%;
 }
 nav {
-    display: grid;
     justify-content: space-between;
     align-items: center;
   }
   nav ul {
     list-style: none;
-    /* display:inline;
-     */
-     display: inline;
-     /* overflow: -moz-hidden-unscrollable; */
-
+   
     gap: 0.5rem;
   }
   nav a {
