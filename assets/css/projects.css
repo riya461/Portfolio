@@ -4,9 +4,10 @@
 }
 
 .content {
-    /* overflow: scroll; */
+    
     flex-grow: 1;
     display: grid;
+    overflow: auto;
     gap: 2.3em;
     grid-template-columns: repeat(2,auto);
     grid-template-areas: "one two "
@@ -22,7 +23,7 @@
 }
 .card1{
     grid-area: one;
-    background-size: 90%;
+    background-size: 100%;
     background-image: url('../images/card1.png');
 
 }
