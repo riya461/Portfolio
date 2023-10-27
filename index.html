@@ -137,7 +137,7 @@
                 <div class="edu_container">
                     <div class="edu">
                         <div class="edu__title">
-                            BTech S1 and S2
+                            BTech S1 S2
                         </div>
                         <div class="edu__subtitle">
                             TKMCE Kollam
@@ -405,10 +405,10 @@
                         </div>
                         <div class="cont-right">
                             <form name="submit-to-google-sheet">
-                                <input type="text" name="Name" placeholder="Your Name" required>
-                                <input type="email" name="Email" placeholder="Your Email" required>
-                                <textarea name="Message"   rows="6" placeholder="Your Message" required></textarea>
-                                <button type="submit" class="submit btn">Submit</button>
+                                <input type="text" name="Name" class="name" placeholder="Your Name" required>
+                                <input type="email" name="Email" class = "name" placeholder="Your Email" required>
+                                <textarea name="Message"   rows="6" class-="name" placeholder="Your Message" required></textarea>
+                                <button type="submit" class="submit btn" >Submit</button>
 
                             </form>
                         </div>
@@ -442,7 +442,10 @@
           fetch(scriptURL, { method: 'POST', body: new FormData(form)})
             .then(response => console.log('Success!', response))
             .catch(error => console.error('Error!', error.message))
+            location.reload();
+
         })
+        
       </script>
 
 </body>
