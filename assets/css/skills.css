@@ -5,9 +5,24 @@
     display:flex;
     justify-content: center;
     align-items: center;
-
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     /* overflow:scroll; */
 }
 .achieve{
     display: flex;
+}
+#position {
+    margin: 10px;
+    padding-top: 100px;
+    
+
+}
+#position .content{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+#blogs{
+    padding: 100px;
 }

@@ -27,7 +27,12 @@ header{
     justify-content: space-between;
     align-items: center;
 }
-
+#main_nav{
+    display: none;
+}
+.with_nav #main_nav {
+    display: block;
+}
 /* active line  */
 .main_div{
     margin-top: 5rem;
@@ -128,6 +133,10 @@ form input, form textarea{
 .submit {
     align-self: flex-end;
     width: 30%;
+}
+li{
+    list-style: none;
+
 }
 nav {
     justify-content: space-between;
