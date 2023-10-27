@@ -9,8 +9,8 @@
     grid-template-columns: repeat(3, 1fr);
     /* overflow:scroll; */
 }
-.achieve{
-    display: flex;
+#skills, #projects{
+    padding: 100px;
 }
 #position {
     margin: 10px;

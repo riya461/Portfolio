@@ -117,7 +117,7 @@ form input, form textarea{
 }
 
 @media only screen and (min-width: 600px) {
-    .left-col{
+    .col{
         display: flex;
     }
     nav{
@@ -158,4 +158,8 @@ nav {
   }
   nav ul a:hover {
     border-bottom: 2px solid #ffffff;
+  }
+
+  #education{
+    padding: 100px;
   }
