@@ -5,19 +5,19 @@ const projects = [
     title: 'Diagnox',
     description: 'Revolutionize diagnostics with our Telegram Bot: instant, detailed MRI/CT scan insights and management for faster, accurate medical decisions.',
     link: 'https://github.com/riya461/Diagnox',
-    image: 'src/assets/Diagnox.png',
+    image: '/assets/Diagnox.png',
   },
   {
     title: 'Voice-over',
     description: 'Utilizing Machine Learning Models to Extract Key Characteristics from Audio Recordings.',
     link: 'https://github.com/riya461/mini_project',
-    image: 'src/assets/mini.png',
+    image: '/assets/mini.png',
   },
   {
     title: 'Webclipper',
     description: 'Bookmarker lets you highlight, save, and revisit specific text on any webpage, with a sleek interface.',
     link: 'https://github.com/riya461/WebClipper?tab=readme-ov-file',
-    image: 'src/assets/webclipper.png',
+    image: '/assets/webclipper.png',
   },
   // Add more projects as needed
 ];

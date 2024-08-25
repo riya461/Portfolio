@@ -6,7 +6,7 @@ import About from './components/About';
 import Projects from './components/Projects';
 import Connect from './components/Connect';
 import Experience from './components/Experience';
-import houseicon from './assets/house.svg';
+import houseicon from '/assets/house.svg';
 
 const App = () => {
   

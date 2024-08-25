@@ -49,17 +49,17 @@ const Home = () => {
           <ul className="bg-background p-3 rounded-lg flex flex-col space-y-2">
             <li className="w-10 h-10">
               <a href="https://github.com/riya461">
-                <img className="hover:h-10 h-7" src="src/assets/github.svg" alt="GitHub" />
+                <img className="hover:h-10 h-7" src="assets/github.svg" alt="GitHub" />
               </a>
             </li>
             <li className="w-10 h-10">
               <a href="https://x.com/RiyaSabu03">
-                <img className="hover:h-10 h-7" src="src/assets/twitter.svg" alt="Twitter" />
+                <img className="hover:h-10 h-7" src="assets/twitter.svg" alt="Twitter" />
               </a>
             </li>
             <li className="w-10 h-10">
               <a href="https://www.linkedin.com/in/riya-sabu-dev/">
-                <img className="hover:h-10 h-7" src="src/assets/linkedin.svg" alt="LinkedIn" />
+                <img className="hover:h-10 h-7" src="assets/linkedin.svg" alt="LinkedIn" />
               </a>
             </li>
           </ul>

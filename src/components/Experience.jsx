@@ -5,57 +5,57 @@ const experiences = [
         date: 'May 2024 - present',
         role: 'Academic Intern',
         company: 'IEDC Kerala',
-        logo: 'src/assets/iedc.jpeg', // Add the logo image path here
+        logo: '/assets/iedc.jpeg', // Add the logo image path here
       },
     {
         date: 'Feb 2024 - present',
         role: 'WIE Chairperson',
         company: 'IEEE SB CET',
-        logo: 'src/assets/ieesbcet.jpeg', // Add the logo image path here
+        logo: '/assets/ieesbcet.jpeg', // Add the logo image path here
       },
       {
         date: 'May 2024 - Jul 2024',
         role: 'Engineering Intern',
         company: 'Typito',
-        logo: 'src/assets/typito.jpeg', // Add the logo image path here
+        logo: '/assets/typito.jpeg', // Add the logo image path here
       },
       {
         date: 'Aug 2023 - Mar 2024',
         role: 'Webmaster',
         company: 'CS Association',
-        logo: 'src/assets/csc.jpeg', // Add the logo image path here
+        logo: '/assets/csc.jpeg', // Add the logo image path here
       },
     
     {
         date: 'Oct 2023 - May 2024',
         role: 'Web Team',
         company: 'EETI Foundation',
-        logo: 'src/assets/eeti.jpeg', // Add the logo image path here
+        logo: '/assets/eeti.jpeg', // Add the logo image path here
       },
       
   {
     date: 'April 2023 - Mar 2024',
     role: 'Program Facilitator',
     company: 'TinkerHub CET',
-    logo: 'src/assets/tinkerhubcet.jpeg', // Add the logo image path here
+    logo: '/assets/tinkerhubcet.jpeg', // Add the logo image path here
   },
   {
     date: 'April 2023 - Jan 2024',
     role: 'Web Team',
     company: 'IEEE SB CET',
-    logo: 'src/assets/ieesbcet.jpeg', // Add the logo image path here
+    logo: '/assets/ieesbcet.jpeg', // Add the logo image path here
   },
   {
     date: 'April 2023 - Mar 2024',
     role: 'Project Co-ordinator SatHacknight',
     company: 'TinkerHub Foundation',
-    logo: 'src/assets/tinkerhub.jpeg', // Add the logo image path here
+    logo: '/assets/tinkerhub.jpeg', // Add the logo image path here
   },
   {
     date: 'Nov 2022 - May 2023',
     role: 'Python Learning Facilitator',
     company: 'TinkerHub Foundation',
-    logo: 'src/assets/tinkerhub.jpeg', // Add the logo image path here
+    logo: '/assets/tinkerhub.jpeg', // Add the logo image path here
   },
 ];
 
