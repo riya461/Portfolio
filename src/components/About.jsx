@@ -28,7 +28,7 @@ const About = () => {
         About Me
       </h2>
       <div className="flex sm:flex-row flex-col items-center w-full justify-center xl:mx-10">
-        <div id="image-section" className="flex items-center w-64 xl:mx-32 justify-center animate-section">
+        <div id="image-section" className="flex items-center w-3/4 sm:w-1/3 xl:mx-32 justify-center animate-section">
           <img className="mb-16 sm:m-16 border-4" src="src/assets/riya.png" alt="Riya" />
         </div>
         <div className="w-3/4 flex flex-col animate-section">

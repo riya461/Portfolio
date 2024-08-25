@@ -32,7 +32,7 @@ const Home = () => {
             {/* Additional content can go here */}
 
           </div>
-        <div className="flex flex-col m-20 w-full space-y-3 text-start  animate-section">
+        <div className="flex flex-col sm:m-20 w-full space-y-3 text-start  animate-section">
           <h1 className="font-primary text-5xl md:text-8xl uppercase text-primary">I'm Riya Sabu</h1>
           <p className="font-head text-2xl md:text-5xl text-accent">Developing solutions through coding...</p>
           <div className="flex space-x-6">
@@ -45,7 +45,7 @@ const Home = () => {
           </div>
         </div>
 
-        <div id="sidebar" className="font-body text-3xl relative w-15 top-64 right-0 animate-section">
+        <div id="sidebar" className="font-body text-3xl relative w-15 top-64 right-4 sm:right-0 animate-section">
           <ul className="bg-background p-3 rounded-lg flex flex-col space-y-2">
             <li className="w-10 h-10">
               <a href="https://github.com/riya461">

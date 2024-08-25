@@ -3,6 +3,8 @@
   margin: 0 auto;
   padding: 0.75rem;
   text-align: center;
+  overflow-x: hidden;
+  
 }
 
 .logo {
@@ -68,6 +70,17 @@
   transform: translateY(0);
 }
 
+.timeline-line {
+  position: relative;
+}
+
+.timeline-dot {
+  z-index: 1;
+}
+
+.shadow-timeline {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 .group {
   transform: translateY(10px); /* Initial position for animation */
   opacity: 0;
