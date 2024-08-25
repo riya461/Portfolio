@@ -1,0 +1,121 @@
+#root {
+  
+  margin: 0 auto;
+  padding: 0.75rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* Tailwind custom animations */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-header {
+  animation: fadeInUp 1s ease-in-out forwards;
+}
+
+.animate-section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-in-out;
+}
+
+.animate-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.group {
+  transform: translateY(10px); /* Initial position for animation */
+  opacity: 0;
+}
+
+.group.animate-visible {
+  transform: translateY(0); /* End position for animation */
+  opacity: 1;
+}
+* Ensure image scales smoothly on hover */
+.group-hover\:scale-110 {
+  transform: scale(1.10);
+}
+
+/* Transition for project details */
+.transition-opacity {
+  transition: opacity 0.5s ease
+}
+
+.header {
+  position: fixed;
+  bottom: 2em;
+  right: 5em;
+  
+  z-index: 1000; /* Ensures it stays above other content */
+}
+
+/* Ensure the button has a smooth hover transition */
+button {
+  transition: background-color 0.3s ease-in-out;
+}
+/* Loading Effect */
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #EDE1D1;
+  font-size: 2rem;
+}
+
+/* Main Section Styles */
+main a {
+  display: block;
+  margin: 0;
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
