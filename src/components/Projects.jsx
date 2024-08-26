@@ -62,7 +62,7 @@ const Projects = () => {
                 className="w-full h-40 object-cover rounded-sm transition-transform duration-500 transform group-hover:scale-105"
               />
             </div>
-            <div className="bg-white rounded-xl flex-1 p-4">
+            <div className="bg-background rounded-xl flex-1 p-4">
               <h3 className={`${index % 2 !== 0 ? 'text-center md:text-left' : 'text-center md:text-right'} text-2xl md:text-3xl font-head text-accent font-semibold mb-2`}> {/* Adjusted font size */}
                 {project.title}
               </h3>
@@ -71,7 +71,7 @@ const Projects = () => {
               </p>
               <a
                 href={project.link}
-                className="bg-background font-head text-accent py-2 px-4 rounded-lg hover:underline"
+                className="bg-white font-head text-accent py-2 px-4 rounded-lg hover:underline"
                 target="_blank"
                 rel="noopener noreferrer"
               >

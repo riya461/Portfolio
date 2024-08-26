@@ -15,11 +15,11 @@ const Home = () => {
       });
     }, { threshold: 0.1 });
 
-    const elements = sectionRef.current.querySelectorAll('.animate-section');
-    elements.forEach((element) => observer.observe(element));
+    const elements = sectionRef.current?.querySelectorAll('.animate-section');
+    elements?.forEach((element) => observer.observe(element));
 
     return () => {
-      elements.forEach((element) => observer.unobserve(element));
+      elements?.forEach((element) => observer.unobserve(element));
     };
   }, []);
 
@@ -45,21 +45,21 @@ const Home = () => {
           </div>
         </div>
 
-        <div id="sidebar" className="font-body text-3xl absolute right-5 top-1/4 transform -translate-y-1/2 animate-section lg:right-10  sm:right-2">
+        <div id="sidebar" className="font-body text-3xl absolute right-5 top-1/4 transform -translate-y-1/2 animate-section lg:right-10 sm:right-2">
           <ul className="bg-background p-3 rounded-lg flex flex-col space-y-2">
             <li className="w-10 h-10">
-              <a href="https://github.com/riya461">
-                <img className="hover:h-10 h-7" src="assets/github.svg" alt="GitHub" />
+              <a href="https://github.com/riya461" aria-label="GitHub">
+                <img className="hover:h-10 h-7" src="assets/github.svg" alt="GitHub logo" />
               </a>
             </li>
             <li className="w-10 h-10">
-              <a href="https://x.com/RiyaSabu03">
-                <img className="hover:h-10 h-7" src="assets/twitter.svg" alt="Twitter" />
+              <a href="https://x.com/RiyaSabu03" aria-label="Twitter">
+                <img className="hover:h-10 h-7" src="assets/twitter.svg" alt="Twitter logo" />
               </a>
             </li>
             <li className="w-10 h-10">
-              <a href="https://www.linkedin.com/in/riya-sabu-dev/">
-                <img className="hover:h-10 h-7" src="assets/linkedin.svg" alt="LinkedIn" />
+              <a href="https://www.linkedin.com/in/riya-sabu-dev/" aria-label="LinkedIn">
+                <img className="hover:h-10 h-7" src="assets/linkedin.svg" alt="LinkedIn logo" />
               </a>
             </li>
           </ul>
