@@ -1,8 +1,5 @@
 import React from 'react';
 import { useState } from 'react';
-import logo from '../../public/assets/logo-color.svg';
-
-import cross from '../../public/assets/cross.svg';
 
 const Header = () => {
     

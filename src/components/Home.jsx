@@ -26,13 +26,13 @@ const Home = () => {
   return (
     <div className="w-full">
       <Header className="animate-header" />
-      
-      <section ref={sectionRef} className="min-h-screen flex p-6 space-y-6 justify-between">
-      <div>
-            {/* Additional content can go here */}
 
-          </div>
-        <div className="flex flex-col sm:m-20 w-full space-y-3 text-start  animate-section">
+      <section 
+        ref={sectionRef} 
+        className="hero-section min-h-screen flex justify-center items-end p-6 relative"
+        style={{ backgroundImage: "url('/assets/hero.png')", backgroundSize: 'cover', backgroundPosition: 'center' }}
+      >
+        <div className="text-section flex flex-col w-full space-y-3 text-start p-10 animate-section text-white">
           <h1 className="font-primary text-5xl md:text-8xl uppercase text-primary">I'm Riya Sabu</h1>
           <p className="font-head text-2xl md:text-5xl text-accent">Developing solutions through coding...</p>
           <div className="flex space-x-6">
@@ -45,7 +45,7 @@ const Home = () => {
           </div>
         </div>
 
-        <div id="sidebar" className="font-body text-3xl relative w-15 top-64 right-4 sm:right-0 animate-section">
+        <div id="sidebar" className="font-body text-3xl absolute right-5 top-1/4 transform -translate-y-1/2 animate-section lg:right-10  sm:right-2">
           <ul className="bg-background p-3 rounded-lg flex flex-col space-y-2">
             <li className="w-10 h-10">
               <a href="https://github.com/riya461">

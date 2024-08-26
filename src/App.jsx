@@ -15,7 +15,7 @@ const App = () => {
       
       <main>
       <button
-        className={` p-2 bg-secondary flex justify-center header border-2 border-secondary`}
+        className={` p-2 bg-secondary flex justify-center header border-2 border-secondary `}
         
       >
         <a href="#home">

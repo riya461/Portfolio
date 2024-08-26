@@ -54,6 +54,29 @@
     transform: translateY(0);
   }
 }
+.hero-section {
+  /* Adjust the hero section positioning if needed */
+}
+
+.text-section {
+  margin-bottom: 4rem; /* Increase or decrease based on the desired positioning */
+}
+
+#sidebar {
+  right: 1rem; /* Default position for smaller screens */
+}
+
+@media (min-width: 768px) {
+  #sidebar {
+    right: 2.5rem; /* Adjust for tablets and larger screens */
+  }
+}
+
+@media (min-width: 1024px) {
+  #sidebar {
+    right: 3rem; /* Adjust for larger screens */
+  }
+}
 
 .animate-header {
   animation: fadeInUp 1s ease-in-out forwards;
