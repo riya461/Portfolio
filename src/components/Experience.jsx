@@ -1,118 +1,70 @@
-import React, { useEffect, useRef } from 'react';
+import { motion } from 'framer-motion';
 
-const experiences = [
-    {
-        date: 'May 2024 - present',
-        role: 'Academic Intern',
-        company: 'IEDC Kerala',
-        logo: '/assets/iedc.jpeg', // Add the logo image path here
-      },
-    {
-        date: 'Feb 2024 - present',
-        role: 'WIE Chairperson',
-        company: 'IEEE SB CET',
-        logo: '/assets/ieesbcet.jpeg', // Add the logo image path here
-      },
-      {
-        date: 'May 2024 - Jul 2024',
-        role: 'Engineering Intern',
-        company: 'Typito',
-        logo: '/assets/typito.jpeg', // Add the logo image path here
-      },
-      {
-        date: 'Aug 2023 - Mar 2024',
-        role: 'Webmaster',
-        company: 'CS Association',
-        logo: '/assets/csc.jpeg', // Add the logo image path here
-      },
-    
-    {
-        date: 'Oct 2023 - May 2024',
-        role: 'Web Team',
-        company: 'EETI Foundation',
-        logo: '/assets/eeti.jpeg', // Add the logo image path here
-      },
-      
-  {
-    date: 'April 2023 - Mar 2024',
-    role: 'Program Facilitator',
-    company: 'TinkerHub CET',
-    logo: '/assets/tinkerhubcet.jpeg', // Add the logo image path here
-  },
-  {
-    date: 'April 2023 - Jan 2024',
-    role: 'Web Team',
-    company: 'IEEE SB CET',
-    logo: '/assets/ieesbcet.jpeg', // Add the logo image path here
-  },
-  {
-    date: 'April 2023 - Mar 2024',
-    role: 'Project Co-ordinator SatHacknight',
-    company: 'TinkerHub Foundation',
-    logo: '/assets/tinkerhub.jpeg', // Add the logo image path here
-  },
-  {
-    date: 'Nov 2022 - May 2023',
-    role: 'Python Learning Facilitator',
-    company: 'TinkerHub Foundation',
-    logo: '/assets/tinkerhub.jpeg', // Add the logo image path here
-  },
+const workExperience = [
+  { date: 'Jul 2025 - present', role: 'Software Engineer', company: 'ISDL Bangalore', logo: '/assets/ibm.svg' },
+  { date: 'May 2024 - Jul 2024', role: 'Engineering Intern', company: 'Typito', logo: '/assets/typito.jpeg' },
 ];
 
-const Experience = () => {
-  const sectionRef = useRef(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('animate-visible');
-        } else {
-          entry.target.classList.remove('animate-visible');
-        }
-      });
-    }, { threshold: 0.1 });
-
-    const elements = sectionRef.current.querySelectorAll('.animate-section');
-    elements.forEach((element) => observer.observe(element));
-
-    return () => {
-      elements.forEach((element) => observer.unobserve(element));
-    };
-  }, []);
-
+export const Experience = () => {
   return (
-    <section ref={sectionRef} className="bg-white py-12 px-6 text-center">
-      <h1 className='uppercase font-primary text-primary text-6xl mb-12 animate-section'>
-        Experience
-      </h1>
-      <div className="relative">
-        <div className="relative max-w-4xl mx-auto">
-          {experiences.map((experience, index) => (
-            <div key={index} className="relative flex items-start mb-12 animate-section">
-              {/* Dot */}
-              <div className="absolute w-6 h-6 bg-primary rounded-full left-10 top-1/2 transform -translate-y-1/2 timeline-dot"></div>
-              
-              {/* Line connecting dots */}
-              
-                <div className="absolute w-0.5 bg-primary left-12 top-1/2 h-64 transform -translate-y-1/2"></div>
-              
+    <section className="py-24 sm:px-6 text-center relative bg-mint-wash">
+      <div className="max-w-4xl mx-auto">
+        <motion.div
+          className="mb-16"
+          initial={{ opacity: 0, y: 30, rotate: 1 }}
+          whileInView={{ opacity: 1, y: 0, rotate: 0 }}
+          viewport={{ once: true, margin: '-100px' }}
+          transition={{ duration: 0.7 }}
+        >
+          <h2 className="section-heading text-5xl sm:text-6xl md:text-7xl uppercase">
+            Experience
+          </h2>
+          <div className="font-handwriting text-xl text-plum mt-2">what I&apos;ve been upto ✦</div>
+        </motion.div>
 
-              <div className="ml-24 w-full py-4 px-6 bg-background border-2 border-primary rounded-lg shadow-timeline transition-transform duration-300 hover:scale-105">
-                <div className="flex flex-col sm:flex-row items-center mx-4 space-y-3 sm:space-y-0 sm:space-x-16">
-                  <img
-                    src={experience.logo}
-                    alt={experience.company}
-                    className="w-12 h-12 object-contain mr-4"
-                  />
-                  <div className='text-left'>
-                    <h3 className="text-2xl font-semibold text-black mb-1 font-body">{experience.role}</h3>
-                    <h4 className="font-primary text-xl font-semibold text-accent mb-2">{experience.company}</h4>
-                    <p className="font-head text-gray-500 mb-4">{experience.date}</p>
+        <div className="relative">
+          <div className="absolute left-[28px] top-0 bottom-0 w-0.5 bg-gradient-to-b from-coral via-plum to-sky opacity-40" />
+
+          {workExperience.map((experience, index) => (
+            <motion.div
+              key={index}
+              className="relative flex items-start mb-8 pl-20"
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: '-50px' }}
+              transition={{ duration: 0.6, delay: index * 0.15, type: 'spring' }}
+            >
+              <div className="absolute left-[20px] top-6 z-10">
+                <div className="w-5 h-5 rounded-full bg-coral border-3 border-charcoal shadow-sketchy-sm" />
+              </div>
+
+              <div className="w-full">
+                <div className={`card-pastel p-5 sm:p-6 ${
+                  index % 2 === 0 ? 'bg-peach/30' : 'bg-lavender/30'
+                }`}>
+                  <div className="flex flex-col sm:flex-row items-center gap-4">
+                    <div className="flex-shrink-0">
+                      <img
+                        src={experience.logo}
+                        alt={experience.company}
+                        className="w-12 h-12 object-contain rounded-xl border-2 border-charcoal/10 p-1 bg-white hover:rotate-6 transition-transform duration-300"
+                      />
+                    </div>
+                    <div className="text-center sm:text-left flex-1">
+                      <h3 className="text-lg sm:text-xl font-body font-bold text-charcoal mb-0.5">
+                        {experience.role}
+                      </h3>
+                      <h4 className="font-display text-base sm:text-lg font-semibold text-coral">
+                        {experience.company}
+                      </h4>
+                      <p className="font-handwriting text-base text-charcoal/50 mt-1">
+                        {experience.date}
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
@@ -120,5 +72,6 @@ const Experience = () => {
   );
 };
 
-export default Experience;
+export const WorkExperience = Experience;
 
+export default Experience;

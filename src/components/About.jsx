@@ -1,49 +1,77 @@
-import React, { useEffect, useRef } from 'react';
+import { motion } from 'framer-motion';
 
 const About = () => {
-  const sectionRef = useRef(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('animate-visible');
-        } else {
-          entry.target.classList.remove('animate-visible');
-        }
-      });
-    }, { threshold: 0.1 });
-
-    const elements = sectionRef.current.querySelectorAll('.animate-section');
-    elements.forEach((element) => observer.observe(element));
-
-    return () => {
-      elements.forEach((element) => observer.unobserve(element));
-    };
-  }, []);
-
   return (
-    <section ref={sectionRef} className="bg-white py-24 sm:px-6 text-center h-full">
-      <h2 className="text-6xl font-bold text-primary font-primary mb-5 sm:mb-6 animate-section">
-        About Me
-      </h2>
-      <div className="flex sm:flex-row flex-col items-center w-full justify-center xl:mx-10">
-        <div id="image-section" className="flex items-center w-3/4 sm:w-1/3 xl:mx-32 justify-center animate-section">
-          <img className="mb-16 sm:m-16 border-4" src="assets/riya.png" alt="Riya" />
-        </div>
-        <div className="w-3/4 flex flex-col animate-section">
-          <p className="text-lg font-body text-start text-black max-w-3xl sm:mx-10 lg:text-xl">
-            Hi, I'm Riya, a fourth-year student developer at the College of Engineering, Trivandrum. I am pursuing my CSE degree while working on solutions through coding. <br /><br /> My passion is to develop applications bridging the gap between technology and people. 
-            Through hackathons and web teams, I have developed a skill in building fast and efficient solutions.
-          </p>
-          <p className="text-black block sm:hidden lg:block text-lg font-body text-start mb-8 max-w-3xl sm:mx-10 lg:mt-8 lg:text-xl">
-            Outside of coding, I enjoy playing guitar and reading books with a cup of coffee. <br /> Let's work together to build something amazing!
-          </p>
+    <section className="py-24 sm:px-6 text-center relative bg-lemon-wash">
+      <div className="max-w-6xl mx-auto">
+        <motion.div
+          className="mb-16"
+          initial={{ opacity: 0, y: 30, rotate: -2 }}
+          whileInView={{ opacity: 1, y: 0, rotate: 0 }}
+          viewport={{ once: true, margin: '-100px' }}
+          transition={{ duration: 0.7 }}
+        >
+          <h2 className="section-heading text-5xl sm:text-6xl md:text-7xl">
+            About Me
+          </h2>
+          <div className="font-handwriting text-xl text-coral mt-2">a little bit about me ✿</div>
+        </motion.div>
+
+        <div className="flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-16">
+          <motion.div
+            className="w-full max-w-sm"
+            initial={{ opacity: 0, x: -40, rotate: -8 }}
+            whileInView={{ opacity: 1, x: 0, rotate: -2 }}
+            viewport={{ once: true, margin: '-100px' }}
+            transition={{ duration: 0.8, delay: 0.2, type: 'spring' }}
+          >
+            <div className="relative">
+              <div className="absolute -inset-3 bg-peach rounded-blob-2 animate-squish opacity-30" />
+              <div className="relative sketchy-border overflow-hidden bg-cream rotate-[-2deg] hover:rotate-0 transition-transform duration-500">
+                <img
+                  className="w-full object-cover aspect-square"
+                  src="assets/riya.png"
+                  alt="Riya"
+                />
+              </div>
+              <div className="absolute -bottom-4 -right-4 font-handwriting text-lg text-plum bg-lemon px-3 py-1 rotate-6 border-2 border-charcoal rounded-lg shadow-sketchy-sm">
+                that&apos;s me! ✦
+              </div>
+            </div>
+          </motion.div>
+
+          <motion.div
+            className="w-full max-w-2xl text-left"
+            initial={{ opacity: 0, x: 40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: '-100px' }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+          >
+            <div className="notebook-lines sketchy-border bg-cream p-8 sm:p-10 rounded-lg">
+              <p className="text-lg sm:text-xl font-body text-charcoal/80 leading-loose mb-6 relative">
+                <span className="font-handwriting text-3xl text-coral absolute -top-6 -left-2">→</span>
+                I&apos;m Riya, a software engineer who likes building things, breaking down ideas.
+              </p>
+              <p className="text-lg sm:text-xl font-body text-charcoal/80 leading-loose mb-6">
+                I care deeply about building things that are useful beyond myself; contributing to open source and using technology where it can create a meaningful difference.
+              </p>
+              <p className="text-lg sm:text-xl font-body text-charcoal/80 leading-loose mb-6">
+                Outside of work, it is an organised chaos: learning piano, writing, discovering music, following the world around me, or chasing new side challenges.
+              </p>
+              <p className="text-lg sm:text-xl font-body text-charcoal/80 leading-loose">
+                And somewhere between all the code, unfinished ideas, bad jokes, and non-linear plans, I&apos;m still figuring it out — one quest at a time.
+              </p>
+
+              <div className="flex gap-3 mt-8 items-center">
+                <div className="w-16 h-0.5 bg-coral rounded-full" />
+                <span className="font-handwriting text-coral text-xl">~</span>
+                <div className="w-8 h-0.5 bg-plum/40 rounded-full" />
+                <span className="font-handwriting text-plum/60 text-lg">✦</span>
+              </div>
+            </div>
+          </motion.div>
         </div>
       </div>
-      <p className="hidden sm:block lg:hidden text-lg max-w-3xl font-body animate-section">
-        Outside of coding, I enjoy playing guitar and reading books with a cup of coffee. <br /> Let's work together to build something amazing!
-      </p>
     </section>
   );
 };

@@ -1,85 +1,81 @@
-import React, { useEffect, useRef } from 'react';
+import { motion } from 'framer-motion';
 
 const projects = [
-  {
-    title: 'Diagnox',
-    description: 'Revolutionize diagnostics with our Telegram Bot: instant, detailed MRI/CT scan insights and management for faster, accurate medical decisions.',
-    link: 'https://github.com/riya461/Diagnox',
-    image: '/assets/Diagnox.png',
-  },
   {
     title: 'Voice-over',
     description: 'Utilizing Machine Learning Models to Extract Key Characteristics from Audio Recordings.',
     link: 'https://github.com/riya461/mini_project',
     image: '/assets/mini.png',
+    color: 'bg-sky/20',
+    tag: 'ML ✦',
+    tagColor: 'bg-sky text-charcoal',
   },
-  {
-    title: 'Webclipper',
-    description: 'Bookmarker lets you highlight, save, and revisit specific text on any webpage, with a sleek interface.',
-    link: 'https://github.com/riya461/WebClipper?tab=readme-ov-file',
-    image: '/assets/webclipper.png',
-  },
-  // Add more projects as needed
 ];
 
 const Projects = () => {
-  const sectionRef = useRef(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('animate-visible');
-        } else {
-          entry.target.classList.remove('animate-visible');
-        }
-      });
-    }, { threshold: 0.1 });
-
-    const elements = sectionRef.current.querySelectorAll('.animate-section');
-    elements.forEach((element) => observer.observe(element));
-
-    return () => {
-      elements.forEach((element) => observer.unobserve(element));
-    };
-  }, []);
-
   return (
-    <section ref={sectionRef} className="bg-white py-12 px-6 text-center ">
-      <h2 className="text-6xl font-primary font-bold text-primary mb-12  animate-section"> {/* Increased bottom margin */}
-        My Projects
-      </h2>
-      <div className="space-y-8 md:mx-32 lg:mx-64 ">
-        {projects.map((project, index) => (
-          <div
-            key={index}
-            className={`flex flex-col md:flex-row items-center gap-6 p-4 rounded-lg shadow-lg transition-transform duration-500 hover:transform hover:scale-105 hover:shadow-xl border-accent border-2 group animate-section ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} mb-8`}
-          >
-            <div className="flex-shrink-0 w-full md:w-1/2 mb-4 md:mb-0"> {/* Added bottom margin for small screens */}
-              <img
-                src={project.image}
-                alt={project.title}
-                className="w-full h-40 object-cover rounded-sm transition-transform duration-500 transform group-hover:scale-105"
-              />
-            </div>
-            <div className="bg-background rounded-xl flex-1 p-4">
-              <h3 className={`${index % 2 !== 0 ? 'text-center md:text-left' : 'text-center md:text-right'} text-2xl md:text-3xl font-head text-accent font-semibold mb-2`}> {/* Adjusted font size */}
-                {project.title}
-              </h3>
-              <p className={`${index % 2 !== 0 ? 'text-center md:text-left' : 'text-center md:text-right'} text-base md:text-lg font-body text-black mb-4`}> {/* Adjusted font size */}
-                {project.description}
-              </p>
-              <a
-                href={project.link}
-                className="bg-white font-head text-accent py-2 px-4 rounded-lg hover:underline"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                View Source Code &rarr;
-              </a>
-            </div>
-          </div>
-        ))}
+    <section className="py-24 sm:px-6 text-center relative dotted-bg">
+      <div className="max-w-5xl mx-auto">
+        <motion.div
+          className="mb-16"
+          initial={{ opacity: 0, y: 30, rotate: -1 }}
+          whileInView={{ opacity: 1, y: 0, rotate: 0 }}
+          viewport={{ once: true, margin: '-100px' }}
+          transition={{ duration: 0.7 }}
+        >
+          <h2 className="section-heading text-5xl sm:text-6xl md:text-7xl">
+            My Projects
+          </h2>
+          <div className="font-handwriting text-xl text-coral mt-2">things I&apos;ve made ✿</div>
+        </motion.div>
+
+        <div className="space-y-10">
+          {projects.map((project, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 40, rotate: index % 2 === 0 ? -1 : 1 }}
+              whileInView={{ opacity: 1, y: 0, rotate: 0 }}
+              viewport={{ once: true, margin: '-50px' }}
+              transition={{ duration: 0.7, delay: index * 0.15, type: 'spring' }}
+            >
+              <div className={`card-pastel overflow-hidden bg-cream flex flex-col md:flex-row ${
+                index % 2 !== 0 ? 'md:flex-row-reverse' : ''
+              }`}>
+                <div className="flex-shrink-0 w-full md:w-1/2 relative group">
+                  <div className="overflow-hidden">
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-56 sm:h-72 md:h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    />
+                  </div>
+                </div>
+
+                <div className={`flex-1 p-6 sm:p-8 flex flex-col justify-center text-left ${project.color}`}>
+                  <span className={`inline-block self-start font-body font-bold text-xs uppercase tracking-wider px-3 py-1 rounded-full border border-charcoal/20 mb-3 ${project.tagColor}`}>
+                    {project.tag}
+                  </span>
+                  <h3 className="text-2xl sm:text-3xl font-display font-bold text-charcoal mb-3">
+                    {project.title}
+                  </h3>
+                  <p className="text-base sm:text-lg font-body text-charcoal/60 mb-6 leading-relaxed">
+                    {project.description}
+                  </p>
+                  <div>
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bouncy-btn bg-coral text-white text-sm"
+                    >
+                      View Source Code →
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </section>
   );
