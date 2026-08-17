@@ -30,7 +30,7 @@ const About = () => {
               <div className="relative sketchy-border overflow-hidden bg-cream rotate-[-2deg] hover:rotate-0 transition-transform duration-500">
                 <img
                   className="w-full object-cover aspect-square"
-                  src="assets/riya.png"
+                  src="assets/riyas.png"
                   alt="Riya"
                 />
               </div>
